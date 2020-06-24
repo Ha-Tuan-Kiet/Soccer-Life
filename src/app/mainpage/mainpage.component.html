@@ -1,0 +1,155 @@
+<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<app-nav-bar></app-nav-bar>
+<div id="wrapper">
+
+  <!-- Sidebar -->
+
+  <!-- End of Sidebar -->
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <!-- Topbar -->
+
+      <!-- End of Topbar -->
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid pt-4">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+          <h1 class="h2 mb-0 text-gray-800">Medicine Desk</h1>
+          <button class="Add-btn" mat-raised-button (click)="openDialog()">Add Medicine</button>
+        </div>
+
+        <!-- Content Row -->
+        <div class="Body row">
+
+        <!-- Medicine List -->
+          <div class="col-xl-3 col-md-6 mb-4" style="display: contents;">
+            <div class="MediDesk card border-left-primary shadow h-100 py-2">
+              <div class="card-body" >
+                <table class="table table-hover mat-elevation-z8">
+                  <thead>
+                      <th>Tên thuốc</th>
+                      <th>Dạng dùng</th>
+                      <th>Số lượng</th>
+                      <th>Khối lượng</th>
+                      <th>Giá</th>
+                      <th>Trạng Thái</th>
+                      <th></th>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let emp of list">
+                          <td (click)="onEdit(emp)">{{emp.Name}}</td>
+                          <td (click)="onEdit(emp)">{{emp.Type}}</td>
+                          <td (click)="onEdit(emp)">{{emp.Size}}</td>
+                          <td (click)="onEdit(emp)">{{emp.Weight}}</td>
+                          <td (click)="onEdit(emp)">{{emp.Price}}</td>
+                          <td (click)="onEdit(emp)"><i [ngStyle]="{'background-color':statuscolor(emp.Status)}" style="border-radius: 50px" class="fa fa-bullseye"></i></td>
+                          <td><a class="btn text-danger"><i class="fa fa-trash" (click)=onDelete(emp.id)></i></a></td>
+                      </tr>
+                  </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+
+        
+
+        <!-- Medicine Infor -->
+        
+          <div class="Fix-infor">
+
+
+            <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+              <form class="form-inline mr-auto w-100 navbar-search">
+                <div class="input-group">
+                  <input class="form-control bg-infor border-0 small" type="text" [(ngModel)]="firstname" [(ngModel)]="kindstyle" placeholder="Search for...">
+                  <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" (click)="Search()">
+                            <i class="fas fa-search fa-sm"></i>
+                      </button>
+                  </div>
+                </div>
+              </form>
+            </div> -->
+
+            <div class="input-group">
+              <input class="form-control bg-infor border-0 small" type="text" [(ngModel)]="firstname" [(ngModel)]="kindstyle" placeholder="Search for...">
+              <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" (click)="Search()">
+                        <i class="fas fa-search fa-sm"></i>
+                  </button>
+              </div>
+            </div>
+
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+
+                  <mat-panel-title style="font-family: 'Pangolin', cursive;">
+                    Fix Medicine Infor
+                  </mat-panel-title>
+                  <!-- <mat-panel-description>
+                    Type your name and age
+                  </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <app-infor></app-infor>
+                </mat-expansion-panel>
+            </mat-accordion>
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright © Your Website 2019</span>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+
+  </div>
+  <!-- End of Content Wrapper -->
+
+</div>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="homepage">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>

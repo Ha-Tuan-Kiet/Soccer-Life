@@ -1,0 +1,78 @@
+<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+
+<!-- <h2 class="display-4">Product</h2> -->
+<form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+    <!-- Ten thuoc (Name) -->
+    <div class="form-group">
+        <label>Tên Thuốc</label>
+        <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Name" required>
+        <div *ngIf="Name.invalid && Name.touched" class="validation-error"></div>
+        <!--Required-->
+    </div>
+    <!-- Dang dung (Type) -->
+    <div class="form-group">
+        <label>Dạng dùng</label>
+        <input name="Type" #Name="ngModel" [(ngModel)]="service.formData.Type" class="form-control input-group-addon" placeholder="Type">
+    </div>
+    <!-- So luong (Size) -->
+    <div class="form-group">
+        <label>Số lượng</label>
+        <input name="Size" #Name="ngModel" [(ngModel)]="service.formData.Size" class="form-control" placeholder="Size of Shoes">
+    </div>
+    <!-- Khoi luong (Weight) -->
+    <div class="form-group">
+        <label>Khối lượng</label>
+        <input name="Weight" #Name="ngModel" [(ngModel)]="service.formData.Weight" class="form-control input-group-addon" placeholder="Weight">
+    </div>
+    <!-- Gia (Price) -->
+    <div class="form-group">
+        <label>Giá</label>
+        <input name="Price" #Name="ngModel" [(ngModel)]="service.formData.Price" class="form-control input-group-addon" placeholder="Price">
+    </div>
+    <!-- Trang thai (Status) -->
+    <div class="form-group">
+        <label>Trang thái</label>
+        <input name="Status" #Name="ngModel" [(ngModel)]="service.formData.Status" class="form-control input-group-addon" placeholder="Status">
+    </div>
+    <!-- <div class="form-group">
+        <mat-label>Status</mat-label>
+        <mat-select [formControl]="panelColor"panelClass="example-panel-{{panelColor.value}}">
+            <mat-option value="green">Còn hàng</mat-option>
+            <mat-option value="blue">Sắp có</mat-option>
+            <mat-option value="red">Hết Hàng</mat-option>
+        </mat-select>
+    </div> -->
+    <div class="form-group">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-primary" style="width: 100%;" [mat-dialog-close]>Done</button>
+    </div>
+</form>
+<!-- <mat-nav-list style="height: 800px;">
+    <a mat-list-item style="justify-content: center;">
+        <h1 style="font-family: 'Oxanium';">Insert News Shoes</h1>
+    </a>
+    
+    <mat-form-field class="inputinfor ml-4">
+        <mat-label>Shoes Name</mat-label>
+        <input matInput name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="ShoesName" required>
+        <div *ngIf="Name.invalid && Name.touched" class="validation-error">This place must have.</div>
+
+    </mat-form-field>
+
+    <mat-form-field class="inputinfor ml-4">
+        <mat-label>Size</mat-label>
+        <input matInput name="Size" #Name="ngModel" [(ngModel)]="service.formData.Size" class="form-control" placeholder="ShoesSize" required>
+
+    </mat-form-field>
+
+    <mat-form-field class="inputinfor ml-4">
+        <mat-label>Price</mat-label>
+        <input matInput name="Price" #Name="ngModel" [(ngModel)]="service.formData.Price" class="form-control" placeholder="ShoesPrice" required>
+
+    </mat-form-field>
+
+    <button type="submit"  class="btn mt-4 ml-4">Add</button>
+
+
+
+  </mat-nav-list> -->

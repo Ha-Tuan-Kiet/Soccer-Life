@@ -1,0 +1,50 @@
+.Home{
+  background-image: url("https://www.pharmacymagazine.co.uk/images/view/fce98090fe0bcd117955d5a61e4ede2c.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+img{
+  width: 60px;
+  height: 60px;
+}
+.navbar{
+  height: 37%;
+  justify-content: flex-end;
+  margin-right: 80px;
+  }
+  .iconbtn{
+    color: blueviolet;
+    height: 50%;
+    width: 50%;
+    font-family: 'Oxanium', ;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 60px;
+    font-size: 70px;
+    box-shadow: 0 20px #999;
+  }
+  .iconbtn:hover{
+    font-family: 'Oxanium', ;
+    color: red;
+  }
+  .iconbtn:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .emty{
+    height: 35%;
+  }
+  .botm-div{
+    height: 12%;
+    margin-left: 24%;
+  }
+  .loginbtn{
+    background-color: rgb(230, 46, 46);
+    color: white;
+    font-size: 40px;
+    height: 100%;
+    width: 21%;
+    font-family: 'Oxanium';
+  }
