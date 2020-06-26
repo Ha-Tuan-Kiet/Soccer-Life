@@ -8,7 +8,7 @@
 a{
     text-decoration:none;
 }
-.Account-btn{
+.Account-btn {
   font-size: 30px;
   border: none;
   border-radius: 5px;
@@ -17,6 +17,18 @@ a{
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 .Account-btn:hover{
+  background: #e9971d;
+  color: white;
+}
+.User-btn{
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Oxanium';
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.User-btn:hover{
   background: #e9971d;
   color: white;
 }
