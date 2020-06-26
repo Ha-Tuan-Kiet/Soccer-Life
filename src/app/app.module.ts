@@ -44,8 +44,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 //Filter
 import {MatTableModule} from '@angular/material/table';
 import { ShoesdeskComponent } from './shoesdesk/shoesdesk.component';
-//Notification
-// import { ToastrModule } from 'ngx-toastr';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +56,7 @@ import { ShoesdeskComponent } from './shoesdesk/shoesdesk.component';
     HomepageComponent,
     MainpageComponent,
     ShoesdeskComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,7 +78,6 @@ import { ShoesdeskComponent } from './shoesdesk/shoesdesk.component';
     MatBottomSheetModule,
     MatListModule,
     MatExpansionModule,
-    // ToastrModule.forRoot(),
 // Firebaselib
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,  //firestore

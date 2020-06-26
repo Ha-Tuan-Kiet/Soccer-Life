@@ -5,7 +5,7 @@
     <!-- Ten thuoc (Name)-->
     <div class="form-group" style="text-align: left;">
         <label>Tên thuốc</label>
-        <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Name" required>
+        <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Name" #item required>
         <div *ngIf="Name.invalid && Name.touched" class="validation-error">This place must have.</div>
         <!--Required-->
     </div>
@@ -34,7 +34,9 @@
         <label>Status</label>
         <input name="Status" #Name="ngModel" [(ngModel)]="service.formData.Status" class="form-control input-group-addon" placeholder="Status">
     </div>
+    <!-- Update Button -->
     <div class="form-group">
-        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-primary" style="width: 100%;">Done</button>
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-facebook" style="width: 100%;"
+        (click)="openSnackBar(item.value)" >Update</button>
     </div>
 </form>

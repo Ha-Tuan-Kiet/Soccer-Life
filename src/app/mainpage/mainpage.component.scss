@@ -27,8 +27,8 @@ a{
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 .Add-btn:hover{
-  background: rgb(34,191,195);
-  background: linear-gradient(0deg, rgba(34,191,195,1) 0%, rgba(227,253,45,0.8267682072829132) 100%);
+  background: #3b5998;
+  color: white;
 }
 .Inforbox{
   width: 800px;
@@ -50,11 +50,11 @@ table {
 
 .mat-form-field {
   font-size: 14px;
-  width: 100%;
+  // width: 100%;
 }
-.mat-form-field + .mat-form-field {
-  margin-left: 8px;
-}
+// .mat-form-field + .mat-form-field {
+//   margin-left: 8px;
+// }
 .Fix-infor{
   width: 40%;
   font-family: 'Pangolin', cursive;
@@ -69,5 +69,10 @@ table {
 }
 .h2{
   font-family: 'Oxanium';
-  background-color: white;
+  background-color: rgb(91, 91, 233);
+  color: white;
+}
+.btn 
+.btn-primary:hover{
+  background: #3b5998;
 }

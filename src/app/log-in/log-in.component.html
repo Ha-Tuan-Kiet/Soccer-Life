@@ -1,15 +1,16 @@
 <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
 
-<mat-tab-group mat-align-tabs="center"style="  font-family: 'Oxanium', ;">
+<!-- <mat-tab-group mat-align-tabs="center"style="  font-family: 'Oxanium', ;"> -->
 
 <!-- Login -->
-    <mat-tab label="Log In">
-        <form class="user" [formGroup]="LoginForm" (ngSubmit)="onLogin()">
+    <h2>Login</h2>
+        <form #form="ngForm" class="user" [formGroup]="LoginForm" (ngSubmit)="onLogin()">
             <!-- Input Email -->
             <mat-form-field class="example-full-width mt-2">
                 <mat-label>Enter your email</mat-label>
-                <input matInput type="email" placeholder="Abc@example.com" formControlName="email" [formControl]="email" required>
+                <input matInput type="email" placeholder="phamarcy@example.com" formControlName="email" [formControl]="email" #name required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <div *ngIf="email.invalid && email.touched" class="validation-error"></div>
             </mat-form-field>
             <!-- Inpput Password -->
             <mat-form-field class="example-full-width">
@@ -19,10 +20,22 @@
             </mat-form-field>
             <!-- Log In Button -->
             <div class="example-button-row" style="text-align: center;">
-                <button type="submit" mat-raised-button color="primary" (ngSubmit)="onLogin()"  [mat-dialog-close]>Log In</button>
+                <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-facebook" style="width: 100%;" [mat-dialog-close] (ngSubmit)="onLogin()"
+                (click)="openSnackBar(name.value)">Log In</button>
+            </div>
+<!-- 
+            <div class="space">
+                <div class="s311c"></div>
+                <div class="or">OR</div>
+                <div class="line2"></div>
+            </div> -->
+            <div class="GG">
+                <button type="submit" (ngSubmit)="onLoginwithGG()">
+                  Log in with Google
+                </button>
             </div>
         </form>
-    </mat-tab>
+
 
 <!-- Create Account -->
 
@@ -52,4 +65,4 @@
             </div>
         </form>
     </mat-tab> -->
-</mat-tab-group>
+<!-- </mat-tab-group> -->

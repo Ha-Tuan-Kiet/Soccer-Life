@@ -26,8 +26,8 @@ export class AddshoesComponent implements OnInit {
 
     ) { }
 
-    openSnackBar(message: string, action: string) {
-      this._snackBar.open(message, action, {
+    openSnackBar(item: string) {
+      this._snackBar.open('Add Success !!',item,{
       duration: 2000,
       });
       }

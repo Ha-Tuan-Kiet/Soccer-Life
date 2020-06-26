@@ -12,44 +12,35 @@ import {auth} from 'firebase';
 import { UserService } from '../services/user.service';
 
 @Component({
-  selector: 'app-log-in',
-  templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.scss'],
-  providers:[UserService]
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.scss']
 })
-export class LogInComponent implements OnInit {
+export class SignupComponent implements OnInit {
 
   SignUpForm = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl('')
-  })
-  LoginForm = new FormGroup({
-    email: new FormControl(''),
     password: new FormControl(''),
+    retypePassword: new FormControl(''),
   })
 
-  constructor(public dialogRef: MatDialogRef<LogInComponent>,
+  constructor(public dialogRef: MatDialogRef<SignupComponent>,
     private _snackBar: MatSnackBar,
     public router:Router,
     public authSvc:UserService,
-    
 ) { }
 
-openSnackBar(name: string) {
-  // this._snackBar.open('Login Success !!',name,{
-  // duration: 2000,
-  // });
-  }
+
 
 email = new FormControl('', [Validators.required, Validators.email]);
 password = new FormControl('', [Validators.required, Validators.minLength(8)]);
 retypePassword = new FormControl('', [Validators.required, Validators.pattern(this.password.value)]);
 
-// openSnackBar(message: string, action: string) {
-// this._snackBar.open(message, action, {
-// duration: 2000,
-// });
-// }
+openSnackBar(name: string,) {
+this._snackBar.open(name, 'Has been create !!', {
+duration: 2000,
+});
+}
 
   ngOnInit(): void {
   }
@@ -69,53 +60,14 @@ retypePassword = new FormControl('', [Validators.required, Validators.pattern(th
 
   getRetypePasswordError() {
     return this.retypePassword.hasError('required') ? 'You must enter a password' :
-        this.retypePassword.hasError('pattern') ? 'password doesnt match' :
+        this.retypePassword.hasError('pattern') ? 'You must retype exactly' :
           '';
   }
 
-  async onLogin()
-  {
-    const{email,password}= this.LoginForm.value;
-    try{
-     const user= await this.authSvc.login(email,password);
-     if(user != null)
-     {
-        this.router.navigate(['/mainpage']);
-        this._snackBar.open('Login Success !!',name,{
-          duration: 2000,
-          });
-     }
-     else{
-      this._snackBar.open('Login Fail !!',name,{
-        duration: 2000,
-        });
-     }
-    }
-    catch(error)
-    {
-      console.log(error);
-    }
-  }
 
   onSignUp(){
     const{email,password} = this.SignUpForm.value;
     this.authSvc.signup(email,password);
   }
 
-  async onLoginwithGG(){
-  let user = await this.authSvc.LoginwithGG();
-  if(user != name)
-  {
-    console.log(user);
-    this.router.navigate(['/mainpage']);
-    this._snackBar.open('Login Success !!',name,{
-      duration: 2000,
-      });
-  }
-  else{
-    this._snackBar.open('Login Fail !!',name,{
-      duration: 2000,
-      });
-  } 
-  }
 }

@@ -6,7 +6,7 @@
     <!-- Ten thuoc (Name) -->
     <div class="form-group">
         <label>Tên Thuốc</label>
-        <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Name" required>
+        <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Name" #item required>
         <div *ngIf="Name.invalid && Name.touched" class="validation-error"></div>
         <!--Required-->
     </div>
@@ -43,8 +43,10 @@
             <mat-option value="red">Hết Hàng</mat-option>
         </mat-select>
     </div> -->
+    <!-- Add Button -->
     <div class="form-group">
-        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-primary" style="width: 100%;" [mat-dialog-close]>Done</button>
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-facebook" style="width: 100%;" [mat-dialog-close]
+        (click)="openSnackBar(item.value)">Done</button>
     </div>
 </form>
 <!-- <mat-nav-list style="height: 800px;">

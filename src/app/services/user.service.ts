@@ -6,6 +6,7 @@ import{auth} from 'firebase/app'
 // import { Router } from '@angular/router';
 // import { from } from 'rxjs';
 import{first} from 'rxjs/operators'
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -59,5 +60,15 @@ export class UserService {
     return this.AfAuth.authState.pipe(first()).toPromise();
   }
 
-
+async LoginwithGG(){
+  try{
+    let provider = new firebase.auth.GoogleAuthProvider();
+    let user = this.AfAuth.signInWithPopup(provider);
+    console.log(user);
+    (await user).user.displayName;
+  }
+  catch(error){
+    console.log(error);
+  }
+}
 }
