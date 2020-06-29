@@ -1,22 +1,23 @@
 .Home{
-  background-image: url("https://www.pharmacymagazine.co.uk/images/view/fce98090fe0bcd117955d5a61e4ede2c.jpg");
+  background-image: url("https://boutiquestoredesign.com/wp-content/uploads/2018/10/custom-design-running-shoes-shop-ideas-1500x938.jpg");
   background-size: cover;
+  background-image: length($list: 100%);
   height: 100%;
   width: 100%;
 }
 img{
-  width: 60px;
-  height: 60px;
+  width: 150px;
+  height: 80px;
 }
 .navbar{
-  height: 37%;
-  justify-content: flex-end;
-  margin-right: 80px;
+  height: 36%;
+  justify-content: center;
+  // margin-right: 200px;
   }
   .iconbtn{
-    color: blueviolet;
+    color: black;
     height: 50%;
-    width: 50%;
+    width: 60%;
     font-family: 'Oxanium', ;
     background-color: white;
     border: none;
@@ -27,24 +28,28 @@ img{
   }
   .iconbtn:hover{
     font-family: 'Oxanium', ;
-    color: red;
+    color: #e9971d;
   }
   .iconbtn:active{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
   .emty{
-    height: 35%;
+    height: 30%;
   }
   .botm-div{
-    height: 12%;
-    margin-left: 24%;
+    height: 10%;
+    margin-left: 22%;
   }
   .loginbtn{
     background-color: rgb(230, 46, 46);
     color: white;
     font-size: 40px;
     height: 100%;
-    width: 21%;
+    width: 24%;
     font-family: 'Oxanium';
+  }
+  .loginbtn:hover{
+    background-color: white;
+    color: red;
   }

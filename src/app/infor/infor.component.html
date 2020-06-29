@@ -2,27 +2,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
     <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
-    <!-- Ten thuoc (Name)-->
+    <!-- Ten Giay (Name)-->
     <div class="form-group" style="text-align: left;">
-        <label>Tên thuốc</label>
+        <label>Tên Giày</label>
         <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Name" #item required>
         <div *ngIf="Name.invalid && Name.touched" class="validation-error">This place must have.</div>
         <!--Required-->
     </div>
-    <!-- Dang dung (Type) -->
+    <!-- Loai (Type) -->
     <div class="form-group" style="text-align: left;">
-        <label>Dạng dùng</label>
+        <label>Loại</label>
         <input name="Type" #Name="ngModel" [(ngModel)]="service.formData.Type" class="form-control input-group-addon" placeholder="Type">
     </div>
-    <!-- So luong (Size) -->
+    <!-- Size (Size) -->
     <div class="form-group" style="text-align: left;">
-        <label for="Size">Số lượng</label>
+        <label for="Size">Size</label>
         <input name="Size" #Name="ngModel" [(ngModel)]="service.formData.Size" class="form-control" placeholder="Size">
     </div>
-    <!-- Khoi luong (Weight) -->
+    <!-- Mau (Color) -->
     <div class="form-group" style="text-align: left;">
-        <label>Khối lượng</label>
-        <input name="Weight" #Name="ngModel" [(ngModel)]="service.formData.Weight" class="form-control input-group-addon" placeholder="Weight">
+        <label>Màu</label>
+        <input name="Weight" #Name="ngModel" [(ngModel)]="service.formData.Weight" class="form-control input-group-addon" placeholder="Color">
     </div>
     <!-- Gia (Price) -->
     <div class="form-group" style="text-align: left;">
@@ -31,12 +31,12 @@
     </div>
     <!-- Trang thai (Status) -->
     <div class="form-group" style="text-align: left;">
-        <label>Status</label>
+        <label>Trạng Thái</label>
         <input name="Status" #Name="ngModel" [(ngModel)]="service.formData.Status" class="form-control input-group-addon" placeholder="Status">
     </div>
     <!-- Update Button -->
     <div class="form-group">
-        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-facebook" style="width: 100%;"
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-danger" style="width: 100%;"
         (click)="openSnackBar(item.value)" >Update</button>
     </div>
 </form>

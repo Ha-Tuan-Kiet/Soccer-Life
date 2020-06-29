@@ -22,7 +22,7 @@
             </mat-form-field>
 
             <div class="example-button-row" style="text-align: center;">
-                <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-facebook" style="width: 100%;" [mat-dialog-close] (ngSubmit)="onSignUp()"
+                <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-danger" style="width: 100%;" [mat-dialog-close] (ngSubmit)="onSignUp()"
                 (click)="openSnackBar(name.value)">Create Account</button>
             </div>
         </form>

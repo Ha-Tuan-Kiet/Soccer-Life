@@ -13,7 +13,7 @@ img{
   height: 200px;
 }
 .card-body{
-  font-family: 'Pangolin', cursive;
+  font-family: 'Oxanium';
 }
 a{
     text-decoration:none;
@@ -23,11 +23,13 @@ a{
   border: none;
   border-radius: 5px;
   font-family: 'Oxanium';
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  color: white;
+  background-color: black;
+  // background: rgb(238,174,202);
+  // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 .Add-btn:hover{
-  background: #3b5998;
+  background: #e9971d;
   color: white;
 }
 .Inforbox{
@@ -36,7 +38,7 @@ a{
   border-radius: 2px;
   background-color: white;
   text-align: center;
-  font-family: 'Pangolin', cursive;
+  font-family: 'Oxanium';
 }
 .Body{
     width: 100%;
@@ -57,19 +59,20 @@ table {
 // }
 .Fix-infor{
   width: 40%;
-  font-family: 'Pangolin', cursive;
+  font-family: 'Oxanium';
   font-size: 14px;
 }
 .MediDesk{
   width: 55%;
 }
 .container-fluid{
-  background-image: url("https://wallpaperset.com/w/full/4/6/5/142010.jpg");
+  // background-image: url("https://wallpaperset.com/w/full/4/6/5/142010.jpg");
+  background-image: url("https://i.pinimg.com/originals/b3/18/45/b31845aab5650242863ea32ab5559873.jpg");
   background-size: cover;
 }
 .h2{
   font-family: 'Oxanium';
-  background-color: rgb(91, 91, 233);
+  background-color: black;
   color: white;
   border-radius: 5px;
 }

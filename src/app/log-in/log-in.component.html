@@ -3,12 +3,12 @@
 <!-- <mat-tab-group mat-align-tabs="center"style="  font-family: 'Oxanium', ;"> -->
 
 <!-- Login -->
-    <h2>Login</h2>
+    <h2 style="font-family: 'Oxanium';">Login</h2>
         <form #form="ngForm" class="user" [formGroup]="LoginForm" (ngSubmit)="onLogin()">
             <!-- Input Email -->
             <mat-form-field class="example-full-width mt-2">
                 <mat-label>Enter your email</mat-label>
-                <input matInput type="email" placeholder="phamarcy@example.com" formControlName="email" [formControl]="email" #name required>
+                <input matInput type="email" placeholder="name@example.com" formControlName="email" [formControl]="email" #name required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                 <div *ngIf="email.invalid && email.touched" class="validation-error"></div>
             </mat-form-field>
@@ -20,7 +20,7 @@
             </mat-form-field>
             <!-- Log In Button -->
             <div class="example-button-row" style="text-align: center;">
-                <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-facebook" style="width: 100%;" [mat-dialog-close] (ngSubmit)="onLogin()"
+                <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-danger" style="width: 100%;" [mat-dialog-close] (ngSubmit)="onLogin()"
                 (click)="openSnackBar(name.value)">Log In</button>
             </div>
 <!-- 

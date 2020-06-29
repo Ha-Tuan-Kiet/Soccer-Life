@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: "AIzaSyCoU9ptBcZ1jvjYzP6dtLpOIpmGWM1P2CE",
-    authDomain: "soccerlife-93754.firebaseapp.com",
-    databaseURL: "https://soccerlife-93754.firebaseio.com",
-    projectId: "soccerlife-93754",
-    storageBucket: "soccerlife-93754.appspot.com",
-    messagingSenderId: "780808483036",
-    appId: "1:780808483036:web:7d7d6467f15ff0d0414419"
+    apiKey: "AIzaSyCKSGUY53omdEYifr8Q4FoYrWaFsgydnE4",
+    authDomain: "kietkkkk.firebaseapp.com",
+    databaseURL: "https://kietkkkk.firebaseio.com",
+    projectId: "kietkkkk",
+    storageBucket: "kietkkkk.appspot.com",
+    messagingSenderId: "418430269904",
+    appId: "1:418430269904:web:50f6c5fceb6afc9d9121d5"
   }
 };
 

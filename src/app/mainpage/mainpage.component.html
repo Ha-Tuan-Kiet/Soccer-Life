@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 <app-nav-bar></app-nav-bar>
@@ -22,8 +23,8 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h2 mb-0">Medicine Desk</h1>
-          <button class="Add-btn" mat-raised-button (click)="openDialog()">Add Medicine</button>
+          <h1 class="h2 mb-0">Shoes Desk</h1>
+          <button class="Add-btn" mat-raised-button (click)="openDialog()">Add Shoes</button>
         </div>
 
         <!-- Content Row -->
@@ -31,14 +32,14 @@
 
         <!-- Medicine List -->
           <div class="col-xl-3 col-md-6 mb-4" style="display: contents;">
-            <div class="MediDesk card border-left-primary shadow h-100 py-2">
+            <div class="MediDesk card border-left-warning shadow h-100 py-2">
               <div class="card-body" >
                 <table class="table table-hover mat-elevation-z8">
                   <thead>
-                      <th>Tên thuốc</th>
-                      <th>Dạng dùng</th>
-                      <th>Số lượng</th>
-                      <th>Khối lượng</th>
+                      <th>Tên Giày</th>
+                      <th>Loại</th>
+                      <th>Size</th>
+                      <th>Màu</th>
                       <th>Giá</th>
                       <th>Trạng Thái</th>
                       <th></th>
@@ -82,7 +83,7 @@
             <div class="input-group">
               <input class="form-control bg-infor border-0 small" type="text" [(ngModel)]="firstname" [(ngModel)]="kindstyle" placeholder="Search for...">
               <div class="input-group-append">
-                  <button class="btn btn-primary" type="button" (click)="Search()">
+                  <button class="btn btn-dark" type="button" (click)="Search()">
                         <i class="fas fa-search fa-sm"></i>
                   </button>
               </div>
@@ -92,8 +93,8 @@
               <mat-expansion-panel>
                 <mat-expansion-panel-header>
 
-                  <mat-panel-title style="font-family: 'Pangolin', cursive;">
-                    Fix Medicine Infor
+                  <mat-panel-title style="font-family: 'Oxanium';">
+                    Update Shoes Infor
                   </mat-panel-title>
                   <!-- <mat-panel-description>
                     Type your name and age

@@ -3,27 +3,27 @@
 <!-- <h2 class="display-4">Product</h2> -->
 <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
     <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
-    <!-- Ten thuoc (Name) -->
+    <!-- Ten Giay (Name) -->
     <div class="form-group">
-        <label>Tên Thuốc</label>
+        <label>Tên Giày</label>
         <input name="Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" placeholder="Name" #item required>
         <div *ngIf="Name.invalid && Name.touched" class="validation-error"></div>
         <!--Required-->
     </div>
-    <!-- Dang dung (Type) -->
+    <!-- Loại (Type) -->
     <div class="form-group">
-        <label>Dạng dùng</label>
+        <label>Loại</label>
         <input name="Type" #Name="ngModel" [(ngModel)]="service.formData.Type" class="form-control input-group-addon" placeholder="Type">
     </div>
-    <!-- So luong (Size) -->
+    <!-- Size (Size) -->
     <div class="form-group">
-        <label>Số lượng</label>
+        <label>Size</label>
         <input name="Size" #Name="ngModel" [(ngModel)]="service.formData.Size" class="form-control" placeholder="Size of Shoes">
     </div>
-    <!-- Khoi luong (Weight) -->
+    <!-- Mau (Color) -->
     <div class="form-group">
-        <label>Khối lượng</label>
-        <input name="Weight" #Name="ngModel" [(ngModel)]="service.formData.Weight" class="form-control input-group-addon" placeholder="Weight">
+        <label>Màu</label>
+        <input name="Weight" #Name="ngModel" [(ngModel)]="service.formData.Weight" class="form-control input-group-addon" placeholder="Color">
     </div>
     <!-- Gia (Price) -->
     <div class="form-group">
@@ -32,7 +32,7 @@
     </div>
     <!-- Trang thai (Status) -->
     <div class="form-group">
-        <label>Trang thái</label>
+        <label>Trạng thái</label>
         <input name="Status" #Name="ngModel" [(ngModel)]="service.formData.Status" class="form-control input-group-addon" placeholder="Status">
     </div>
     <!-- <div class="form-group">
@@ -45,7 +45,7 @@
     </div> -->
     <!-- Add Button -->
     <div class="form-group">
-        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-facebook" style="width: 100%;" [mat-dialog-close]
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-danger" style="width: 100%;" [mat-dialog-close]
         (click)="openSnackBar(item.value)">Done</button>
     </div>
 </form>
